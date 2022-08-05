@@ -1,0 +1,14 @@
+{% extends 'layout_base.html' %}
+
+{% block bloqueQueCambia %}
+
+<form action="{% url 'formagen' %}" method="POST"> {% csrf_token %}
+
+    {{miFormulario.as_p}}
+
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock bloqueQueCambia %}
+

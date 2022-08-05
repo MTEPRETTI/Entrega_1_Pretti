@@ -1,0 +1,24 @@
+{% extends 'layout_base.html' %} 
+
+{% block bloqueQueCambia %}
+
+    <p>Estamos buscando las agencias con nombre: {{rsoc}}</p>
+
+    {% if ags %}
+        <ul>
+            
+            {% for a in ags %}
+                <li>
+                    Agencia: {{a.rsoc}} / Zona: {{a.ubicacion}}
+                </li>
+            {% endfor %} 
+
+        </ul>
+    {% else %}
+
+        <p>No hubo coincidencias</p>        
+
+    {% endif %}
+                
+
+{% endblock bloqueQueCambia %}

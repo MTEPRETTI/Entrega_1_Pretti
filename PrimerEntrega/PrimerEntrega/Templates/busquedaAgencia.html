@@ -1,0 +1,15 @@
+{% extends 'layout_base.html' %}
+
+{% block bloqueQueCambia %}
+
+<form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
+
+    <p>Razon Social: <input type="text" name="rsoc"></p>
+  
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock bloqueQueCambia %}
+
